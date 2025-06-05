@@ -1,0 +1,25 @@
+{
+  "name": "task_manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathnaeltamirat/task_manager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nathnaeltamirat/task_manager/issues"
+  },
+  "homepage": "https://github.com/nathnaeltamirat/task_manager#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "json": "^11.0.0"
+  }
+}
