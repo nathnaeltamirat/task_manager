@@ -4,7 +4,7 @@ let temp = [ { id: 1, title: 'Buy groceries', completed: false }, { id: 2, title
 
 
 app.get("/api/tasks",(req,res)=>{
-    res.send(temp)
+    res.json(temp)
 })
 app.delete("/api/tasks/:id",(req,res)=>{
     const id = req.params.id;
@@ -57,6 +57,9 @@ app.put("/api/tasks/:id",(req,res)=>{
 )
 app.post("/api/tasks/",(req,res)=>{
     const {id,title,completed} = req.query;
+    if(!title || !id || !completed){
+        res.json("inputs must not be empty")
+    }
     console.log(id,title,completed);
     new_task = {id:id,title:title,completed:completed};
     let existing = false;
@@ -68,11 +71,11 @@ app.post("/api/tasks/",(req,res)=>{
     }
     if(new_task && !existing){
         temp.push(new_task);
-        res.send("Task updated").status(200);
+        res.json("Task updated").status(200);
     }else if(new_task && existing){
-        res.send("Error updating task with same id found").status(501);
+        res.json("Error updating task with same id found").status(501);
     }
-    res.send("input error").status(401);
+    res.json("input error").status(401);
 })
 
 
