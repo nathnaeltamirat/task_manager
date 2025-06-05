@@ -20,17 +20,37 @@ why all operation is stacked in index.js and not separated in to controllers and
 4. validation of an id before deleting
 
 # Routes
-```get
+GET  
+```bash
  /api/tasks
 ```
-```post
+```json
+[
+    {
+        "id": 1,
+        "title": "Buy groceries",
+        "completed": false
+    },
+    {
+        "id": 2,
+        "title": "Read a book",
+        "completed": true
+    },
+    {
+        "id": "3",
+        "title": "Getting internship",
+        "completed": "false"
+    }
+]
+```
+```bash
  /api/tasks
 ```
 
-```delete
+```bash
 /api/tasks/:id
 ```
 
-```put
+```bash
 /api/tasks/:id
 ```
