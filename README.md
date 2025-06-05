@@ -24,6 +24,7 @@ GET
 ```bash
  /api/tasks
 ```
+RESPONSE  
 ```json
 [
     {
@@ -43,14 +44,46 @@ GET
     }
 ]
 ```
+
+POST  
 ```bash
  /api/tasks
 ```
+INPUTS - query
+```bash
+id:int 
+title:string  
+compeleted:bool 
+```
+RESPONSE  
+```bash
+"Task updated or Error updating task with same id found or input errror"
+```
+
+Update Status  
+```bash
+/api/tasks/:id
+```
+INPUT params  
+```bash
+id:int  
+```
+Response    
+```bash
+"task sucesfully completed"
+```
+
+Delete Status  
 
 ```bash
 /api/tasks/:id
 ```
 
+INPUT params  
 ```bash
-/api/tasks/:id
+id:int
+```
+Response  
+```bash
+"task sucesfully deleted"
 ```
